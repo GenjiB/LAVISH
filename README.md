@@ -17,10 +17,10 @@ This is the PyTorch implementation of our paper: <br>
 <img src="https://genjib.github.io/project_page/LAVISH/assets/method.png" width="70%">
 </p align="center">
 
-[📗Paper](https://arxiv.org/abs/2204.02874) [🏠Project Page](https://genjib.github.io/project_page/LAVISH/) 
+[📗Paper](https://arxiv.org/abs/2212.07983) [🏠Project Page](https://genjib.github.io/project_page/LAVISH/) 
 
 ### 📝 Preparation 
-*  `See each foloder for more detailed settings`
+*  `See each folder for more detailed settings`
 * Audio-Visual Event Localization: ./AVE
 * Audio-Visual Segmentation: ./AVS
 * Audio-Visual Question Answering: ./AVQA
