@@ -5,7 +5,7 @@
 
 <p align="center">
 <img src="https://genjib.github.io/project_page/LAVISH/assets/teaser.png" width="50%">
-</p>p align="center">
+</p>
 
 This is the PyTorch implementation of our paper: <br>
 **Vision Transformers are Parameter-Efficient Audio-Visual Learners**<br>
