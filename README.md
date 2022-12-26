@@ -16,7 +16,7 @@ This is the PyTorch implementation of our paper: <br>
 
 <p align="center">
 <img src="https://genjib.github.io/project_page/LAVISH/assets/method.png" width="70%">
-</p>p align="center">
+</p>
 
 ### 📝 Preparation 
 *  `See each foloder for more detailed settings`
