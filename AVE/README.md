@@ -9,7 +9,7 @@
 4. extract audio into *.wav
 
 
-### 💿 Extract images and audio features. 
+### 💿 Extract images and audio features. (We also provie preprocessed data [here](https://huggingface.co/datasets/genjib/LAVISHData/))
 ```shell
 AVE_Dataset/
 ├── video_frames/

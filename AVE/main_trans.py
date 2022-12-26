@@ -102,6 +102,9 @@ def train(args, model, train_loader, optimizer, criterion, epoch):
 		loss.backward()
 		optimizer.step()
 
+		# weights update
+		if ((batch_idx + 1) % accum_iter == 0) or (batch_idx + 1 == len(train_loader)):
+			optimizer.step()
 
 		if batch_idx % 50 == 0:
 			# print(model.fusion_weight['blocks-0-attn-qkv-weight'])

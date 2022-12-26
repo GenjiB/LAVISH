@@ -1,10 +1,11 @@
 # Vision Transformers are Parameter-Efficient Audio-Visual Learners
+[📗Paper](https://arxiv.org/abs/2204.02874)|| [🏠Project Page](https://genjib.github.io/project_page/LAVISH/) 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) <img src="https://raw.githubusercontent.com/facebookresearch/unbiased-teacher/main/teaser/pytorch-logo-dark.png" width="10%"> 
 
 <p align="center">
 <img src="https://genjib.github.io/project_page/LAVISH/assets/teaser.png" width="50%">
-</p align="center">
+</p>p align="center">
 
 This is the PyTorch implementation of our paper: <br>
 **Vision Transformers are Parameter-Efficient Audio-Visual Learners**<br>
@@ -15,12 +16,10 @@ This is the PyTorch implementation of our paper: <br>
 
 <p align="center">
 <img src="https://genjib.github.io/project_page/LAVISH/assets/method.png" width="70%">
-</p align="center">
-
-[📗Paper](https://arxiv.org/abs/2212.07983) [🏠Project Page](https://genjib.github.io/project_page/LAVISH/) 
+</p>p align="center">
 
 ### 📝 Preparation 
-*  `See each folder for more detailed settings`
+*  `See each foloder for more detailed settings`
 * Audio-Visual Event Localization: ./AVE
 * Audio-Visual Segmentation: ./AVS
 * Audio-Visual Question Answering: ./AVQA
@@ -40,3 +39,11 @@ year = {2022}
 
 ### 👍 Acknowledgments
 Our code is based on [AVSBench](https://github.com/OpenNLPLab/AVSBench) and [MUSIC-AVQA](https://github.com/GeWu-Lab/MUSIC-AVQA)
+
+
+### ✏ Future works: model checkpoints
+| Tasks | Checkpoints                                                                                      |
+|-----------------|-------------|
+| AVE             | [model](??) |
+| AVS             | [model](??) |
+| AVQA            | [model](??) |
