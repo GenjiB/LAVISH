@@ -94,7 +94,7 @@ def train(args, model, train_loader, optimizer, criterion, epoch):
 	
 		optimizer.zero_grad()
 
-		output = model([audio_spec], image, rand_train_idx=rand_train_idx, stage='train')
+		output = model(audio_spec, image, rand_train_idx=rand_train_idx, stage='train')
 
 
 		loss = criterion(output.squeeze(1),rearrange(gt, 'b t class -> (b t) class')) 
@@ -126,10 +126,10 @@ def eval(model, val_loader, args):
 
 		audio_spec, gt= sample['audio_spec'].to('cuda'), sample['GT'].to('cuda')
 		image = sample['image'].to('cuda')
-		audio_vgg = sample['audio_vgg'].float().to('cuda')
+		# audio_vgg = sample['audio_vgg'].float().to('cuda')
 
 		with torch.no_grad():
-			output = model([audio_spec, audio_vgg], image)
+			output = model(audio_spec, image)
 
 		total_acc += (output.squeeze(1).argmax(dim=-1) == rearrange(gt, 'b t class -> (b t) class').argmax(dim=-1)).sum()
 		total_num += output.size(0)

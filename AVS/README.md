@@ -22,10 +22,10 @@ python3 train.py --Adapter_downsample=4 --audio_length=1 --early_stop=5 --is_bef
 If you use this code in your research, please cite:
 
 ```bibtex
-@InProceedings{LAVISH_arxiv2022,
+@InProceedings{LAVISH_CVPR2023,
 author = {Lin, Yan-Bo an Sung, Yi-Lin and Lei, Jie and Bansal, Mohit and Bertasius, Gedas},
 title = {Vision Transformers are Parameter-Efficient Audio-Visual Learners},
-booktitle = {arXiv},
-year = {2022}
+booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+year = {2023}
 }
 ```

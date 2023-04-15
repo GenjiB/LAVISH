@@ -55,7 +55,6 @@ class VisualAdapter(nn.Module):
 			self.my_tokens = nn.Parameter(torch.rand((self.opt.num_tokens, input_dim)))
 
 			self.gate_av = nn.Parameter(torch.zeros(1))
-			self.gate_tk = nn.Parameter(torch.ones(1))
 
 			### <------
 
@@ -120,7 +119,7 @@ class VisualAdapter(nn.Module):
 			att_v2tk = F.softmax(att_v2tk, dim=-1)
 			rep_token_res = torch.bmm(att_v2tk, vis_token.squeeze(-1).permute(0,2,1))
 
-			rep_token = rep_token + self.gate_tk*rep_token_res
+			rep_token = rep_token + rep_token_res
 			
 
 			att_tk2x = torch.bmm(x.squeeze(-1).permute(0,2,1), rep_token.permute(0,2,1))
@@ -351,10 +350,6 @@ class MMIL_Net(nn.Module):
 	def forward_swin(self, audio, vis, rand_train_idx=12, stage='eval'):
 
 
-
-		# vggish = audio[1]
-		vggish = rearrange(vggish, 'b t d-> (b t) 1 d')
-		audio = audio[0]
 	   ##### ----------> swin
 
 
