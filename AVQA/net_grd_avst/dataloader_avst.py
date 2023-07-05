@@ -82,8 +82,8 @@ class AVQA_dataset(Dataset):
 
 		self.my_normalize = Compose([
 			# Resize([384,384], interpolation=Image.BICUBIC),
-			# Resize([192,192], interpolation=Image.BICUBIC),
-			Resize([224,224], interpolation=Image.BICUBIC),
+			Resize([192,192], interpolation=Image.BICUBIC),
+			# Resize([224,224], interpolation=Image.BICUBIC),
 			# CenterCrop(224),
 			Normalize(IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD),
 		])
@@ -175,8 +175,8 @@ class AVQA_dataset(Dataset):
 		
 		sample = self.samples[idx]
 		name = sample['video_id']
-		audio = np.load(os.path.join(self.audio_dir, name + '.npy'))
-		audio = audio[::6, :]
+		# audio = np.load(os.path.join(self.audio_dir, name + '.npy'))
+		# audio = audio[::6, :]
 
 		# visual_out_res18_path = '/home/guangyao_li/dataset/avqa-features/visual_14x14'
 		
@@ -264,7 +264,7 @@ class AVQA_dataset(Dataset):
 		### <----
 
 
-		sample = {'audio': audio, 'visual_posi': total_img, 'visual_nega': visual_nega, 'question': ques, 'label': label}
+		sample = {'audio': total_audio, 'visual_posi': total_img, 'visual_nega': visual_nega, 'question': ques, 'label': label}
 
 		if self.transform:
 			sample = self.transform(sample)

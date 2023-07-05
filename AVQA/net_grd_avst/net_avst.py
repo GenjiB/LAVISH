@@ -263,11 +263,9 @@ class AVQA_Fusion_Net(nn.Module):
 		self.yb_fc_v = nn.Linear(1536, 512)
 		self.yb_fc_a = nn.Linear(1536, 512)
 
-		self.resnet = timm.create_model('resnet18', pretrained=True)
+		# self.resnet = timm.create_model('resnet18', pretrained=True)
 		self.swin = timm.create_model('swinv2_large_window12_192_22k', pretrained=True)
 
-		self.nce_av = InfoNCELoss(margin=opt.tmp_av)
-		self.nce_tv = InfoNCELoss(margin=opt.tmp_tv)
 
 		### ------------> for swin 
 		hidden_list = []
@@ -373,7 +371,7 @@ class AVQA_Fusion_Net(nn.Module):
 		############## <----------
 
 		visual_nega = self.yb_fc_v(visual_nega)
-		visual_posi = rearrange(visual_posi, '(b t) (h w) c -> b t c h w', b=bs ,t=t, h=6 ,w=6)
+		visual_posi = rearrange(f_v, '(b t) (h w) c -> b t c h w', b=bs ,t=t, h=6 ,w=6)
 		visual_nega = rearrange(visual_nega, '(b t) (h w) c -> b t c h w', b=bs ,t=t, h=6 ,w=6)
 
 
