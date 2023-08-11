@@ -23,7 +23,7 @@ If you use this code in your research, please cite:
 
 ```bibtex
 @InProceedings{LAVISH_CVPR2023,
-author = {Lin, Yan-Bo an Sung, Yi-Lin and Lei, Jie and Bansal, Mohit and Bertasius, Gedas},
+author = {Lin, Yan-Bo and Sung, Yi-Lin and Lei, Jie and Bansal, Mohit and Bertasius, Gedas},
 title = {Vision Transformers are Parameter-Efficient Audio-Visual Learners},
 booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
 year = {2023}
